@@ -7,6 +7,7 @@ int main() {
     std::cout << "Enter your name: ";
     std::string name;
     std::cin >> name;
+    int c;///////////
     std::cout << "Hello, " << name << "!" << std::endl;
     return 0;
 } 
