@@ -2,9 +2,12 @@
 
 int main()
 {
-    system("chcp 1251");
-    std::cout << "Юра:)\n";
+    int x = 78;
+    std::cout << x << std::endl;
+    
+    //std::cout << "QQQQ\n";
+    //std::cout << "Hello!" << std::endl;
 
-    system("pause");
+    //system("pause");
     return 0;
 } 
