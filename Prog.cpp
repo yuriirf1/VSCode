@@ -39,6 +39,75 @@ double circumference(double diameter)//begin4
     const double Pi = 3.1415;
     return Pi * diameter;
 }
+double volumeCube(double side)//begin5_1
+{
+    return std::pow(side, 3);
+}
+double areaCube(double side)//begin5_2
+{
+    return 6 * std::pow(side, 2);
+}
+double volumeParallelepiped(double height, double width, double depth)//begin6_1
+{
+    return height * width * depth;
+}
+double areaParallelepiped(double height, double width, double depth)//begin6_2
+{
+    return 2 * (height * width + height * depth + width * depth);
+}
+double circumference(double radius)//begin7_1
+{
+    const double Pi = 3.1415;
+    return 2 * Pi * radius;
+}
+double areaCircle(double radius)//begin7_2
+{
+    const double Pi = 3.1415;
+    return Pi * std::pow(radius, 2);
+}
+double arithmeticMean(double a, double b)//begin8
+{
+    return (a + b) / 2;
+}
+double geometricMean(double a, double b)//begin9
+{
+    //if(a >= 0 && b >= 0)
+    //{
+        return std::sqrt(fabs(a) * fabs(b));
+    //}
+}
+double sumSquares(double a, double b)//begin10_1
+{
+    if(a != 0 & b != 0)
+    {
+        return std::pow(a, 2) + std::pow(b, 2);
+    }
+    return 0;
+}
+double differenceSquares(double a, double b)//begin10_2
+{
+    if(a != 0 & b != 0)
+    {
+        return std::pow(a, 2) - std::pow(b, 2);
+    }
+    return 0;
+}
+double multipleSquares(double a, double b)//begin10_3
+{
+    if(a != 0 & b != 0)
+    {
+        return std::pow(a, 2) * std::pow(b, 2);
+    }
+    return 0;
+}
+double divisionSquares(double a, double b)//begin10_4
+{
+    if(a != 0 & b != 0)
+    {
+        return std::pow(a, 2) / std::pow(b, 2);
+    }
+    return 0;
+}
 //Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
 void swapMinMax(double a, double b)//if task 9
 {
