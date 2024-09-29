@@ -5,6 +5,18 @@ double squareArea(double);//begin2
 double perimeterOfRectangle(double, double);//begin3_1
 double areaOfRectangle(double, double);//begin3_2
 double circumference(double);//begin4
+double volumeCube(double);//begin5_1
+double areaCube(double);//begin5_2
+double volumeParallelepiped(double, double, double);//begin6_1
+double areaParallelepiped(double, double, double);//begin6_2
+double circumference(double);//begin7_1
+double areaCircle(double);//begin7_2
+double arithmeticMean(double, double);//begin8
+double geometricMean(double, double);//begin9
+double sumSquares(double, double);//begin10_1
+double differenceSquares(double, double);//begin10_2
+double multipleSquares(double, double);//begin10_3
+double divisionSquares(double, double);//begin10_4
 void swapMinMax(double, double);//if task 9 
 int main()
 {
