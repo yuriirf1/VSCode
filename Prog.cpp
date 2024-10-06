@@ -1,4 +1,3 @@
-//<<<<<<< HEAD
 #include <iostream>
 #include <cmath>
 double perimeterOfSquare(double);                    // prototype of function Begin1
@@ -44,7 +43,7 @@ double areaRectangle(double, double, double, double);       // begin19_3
 void swapMinMax(double, double);                            // if task 9
 int main()
 {
-    std::cout << "AAA\t" << perimeterRectangle(-1, -1, 3, 3) << std::endl
+    std::cout << perimeterRectangle(-1, -1, 3, 3) << std::endl
               << perimeterRectangle(-1, 1, 3, -3) << std::endl
               << perimeterRectangle(1, -1, -3, 3) << std::endl
               << perimeterRectangle(3, 3, -1, -1) << std::endl
@@ -315,12 +314,11 @@ double distance0(double pointX1, double pointY1, double pointX2, double pointY2)
 double distance(double pointX1, double pointY1, double pointX2, double pointY2) // begin20v2
 {
     minSwap(pointX1, pointX2);
-    minSwap(pointY1, pointY2);
+    minSwap(pointY1, pointY2);////////////////////////////////////////////////////////////////
     return std::sqrt(std::pow(pointX2 - pointX1, 2) + std::pow(pointY2 - pointY1, 2));
 }
 
-// Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
-void swapMinMax(double a, double b) // if task 9
+void swapMinMax(double a, double b) // if task 9//// Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
 {
     if (a < b)
     {
@@ -331,16 +329,3 @@ void swapMinMax(double a, double b) // if task 9
     b = c;
     std::cout << a << ' ' << b << std::endl;
 }
-
-/*int main()
-{
-    int x = 78;
-    std::cout << x << std::endl;
-
-    //std::cout << "QQQQ\n";
-    //std::cout << "Hello!" << std::endl;
-
-    //system("pause");
-    return 0;
-}*/
-//>>>>>>> master
