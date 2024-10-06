@@ -332,8 +332,6 @@ void swapMinMax(double a, double b) // if task 9
     std::cout << a << ' ' << b << std::endl;
 }
 
-// #include <iostream>
-
 /*int main()
 {
     int x = 78;
