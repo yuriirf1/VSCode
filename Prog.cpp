@@ -45,6 +45,7 @@ void swapMinMax(double, double);                     // if task 9
 int main()
 {
     double a;
+    std::cout << perimeterRectangle(-1, -1, 3, 3) << std::endl << perimeterRectangle0(-1, 1, 3, -3) << std::endl << perimeterRectangle0(1, -1, -3, 3) << std::endl << perimeterRectangle0(3, 3, -1, -1) << std::endl << perimeterRectangle0(-3, -3, 1, 1) << std::endl << perimeterRectangle0(-3, 3, 1, -1) << std::endl << perimeterRectangle0(0, 0, -4, -4) << std::endl;
     std::cout << "Enter side of square: ";
     std::cin >> a;
     double result = perimeterOfSquare(a);
