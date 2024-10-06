@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <iostream>
 #include <cmath>
 double perimeterOfSquare(double);                    // begin1 prototype of functionr of function Begin1
@@ -230,3 +231,18 @@ void swapMinMax(double a, double b) // if task 9
     b = c;
     std::cout << a << ' ' << b << std::endl;
 }
+
+#include <iostream>
+
+int main()
+{
+    int x = 78;
+    std::cout << x << std::endl;
+    
+    //std::cout << "QQQQ\n";
+    //std::cout << "Hello!" << std::endl;
+
+    //system("pause");
+    return 0;
+} 
+>>>>>>> master
