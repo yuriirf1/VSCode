@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+//<<<<<<< HEAD
 #include <iostream>
 #include <cmath>
 double perimeterOfSquare(double);                    // begin1 prototype of functionr of function Begin1
@@ -68,7 +68,7 @@ double areaParallelepiped(double height, double width, double depth) // begin6_2
 {
     return 2 * (height * width + height * depth + width * depth);
 }
-double circumference(double radius) // begin7_1
+double circumference2(double radius) // begin7_1
 {
     const double Pi = 3.1415;
     return 2 * Pi * radius;
@@ -175,7 +175,7 @@ double squareRing(double radius1, double radius2) // begin13var1
     }
     return areaCircle(radius1) - areaCircle(radius2);
 }
-double squareRing(double radius1, double radius2) // begin13var2
+double squareRing2(double radius1, double radius2) // begin13var2
 {
     return fabs(areaCircle(radius1) - areaCircle(radius2));
 }
@@ -194,7 +194,7 @@ double diameter(double area)// begin15_1
     const double Pi = 3.1415;
     return 2 * std::sqrt(area / Pi);
 }
-double circumference2(double area) // begin15_2
+double circumference3(double area) // begin15_2
 {
     const double Pi = 3.1415;
     return Pi * diameter(area);
@@ -232,9 +232,9 @@ void swapMinMax(double a, double b) // if task 9
     std::cout << a << ' ' << b << std::endl;
 }
 
-#include <iostream>
+//#include <iostream>
 
-int main()
+/*int main()
 {
     int x = 78;
     std::cout << x << std::endl;
@@ -244,5 +244,5 @@ int main()
 
     //system("pause");
     return 0;
-} 
->>>>>>> master
+}*/
+//>>>>>>> master
