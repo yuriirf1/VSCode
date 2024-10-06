@@ -1,7 +1,7 @@
 //<<<<<<< HEAD
 #include <iostream>
 #include <cmath>
-double perimeterOfSquare(double);                    // begin1 prototype of functionr of function Begin1
+double perimeterOfSquare(double);                    // prototype of function Begin1
 double squareArea(double);                           // begin2
 double perimeterOfRectangle(double, double);         // begin3_1
 double areaOfRectangle(double, double);              // begin3_2
@@ -18,34 +18,47 @@ double sumSquares(double, double);                   // begin10_1
 double differenceSquares(double, double);            // begin10_2
 double multipleSquares(double, double);              // begin10_3
 double divisionSquares(double, double);              // begin10_4
-double sumAbs(double, double); // begin11_1
-double differenceAbs(double, double); // begin11_2
-double multipleAbs(double, double); // begin11_3
-double divideAbs(double, double); // begin11_4
-double hypotenuse(double, double); // begin12_1
-double perimeter(double, double); // begin12_2
-void swap(double&, double&);
-double squareRing(double, double); // begin13var1
-double squareRing2(double, double); // begin13var2
-double radius(double); // begin14_1
-double areaCircle2(double); // begin14_2
-double diameter(double);// begin15_1
-double circumference3(double); // begin15_2
-double distance(double, double);//begin16var1
-double distance16(double, double);//begin16var2
-double length(double, double); // begin17_1
-double sumABC(double, double, double); // begin17_2
-double multipleACB(double, double, double); // begin18
-void minSwap(double&, double&);//begin19_0
-bool equalSign(double, double);//begin19_1
-double perimeterRectangle0(double, double, double, double);//begin19_2v0
-double perimeterRectangle(double, double, double, double);//begin19_2v1
-double areaRectangle(double, double, double, double);//begin19_3
-void swapMinMax(double, double);                     // if task 9
+double sumAbs(double, double);                       // begin11_1
+double differenceAbs(double, double);                // begin11_2
+double multipleAbs(double, double);                  // begin11_3
+double divideAbs(double, double);                    // begin11_4
+double hypotenuse(double, double);                   // begin12_1
+double perimeter(double, double);                    // begin12_2
+void swap(double &, double &);
+double squareRing(double, double);                          // begin13var1
+double squareRing2(double, double);                         // begin13var2
+double radius(double);                                      // begin14_1
+double areaCircle2(double);                                 // begin14_2
+double diameter(double);                                    // begin15_1
+double circumference3(double);                              // begin15_2
+double distance(double, double);                            // begin16var1
+double distance16(double, double);                          // begin16var2
+double length(double, double);                              // begin17_1
+double sumABC(double, double, double);                      // begin17_2
+double multipleACB(double, double, double);                 // begin18
+void minSwap(double &, double &);                           // begin19_0
+bool equalSign(double, double);                             // begin19_1
+double perimeterRectangle0(double, double, double, double); // begin19_2v0
+double perimeterRectangle(double, double, double, double);  // begin19_2v1
+double areaRectangle(double, double, double, double);       // begin19_3
+void swapMinMax(double, double);                            // if task 9
 int main()
 {
+    std::cout << "AAA\t" << perimeterRectangle(-1, -1, 3, 3) << std::endl
+              << perimeterRectangle(-1, 1, 3, -3) << std::endl
+              << perimeterRectangle(1, -1, -3, 3) << std::endl
+              << perimeterRectangle(3, 3, -1, -1) << std::endl
+              << perimeterRectangle(-3, -3, 1, 1) << std::endl
+              << perimeterRectangle(-3, 3, 1, -1) << std::endl
+              << areaRectangle(0, 0, -4, -4) << std::endl
+              << areaRectangle(-1, -1, 3, 3) << std::endl
+              << areaRectangle(-1, 1, 3, -3) << std::endl
+              << areaRectangle(1, -1, -3, 3) << std::endl
+              << areaRectangle(3, 3, -1, -1) << std::endl
+              << areaRectangle(-3, -3, 1, 1) << std::endl
+              << areaRectangle(-3, 3, 1, -1) << std::endl
+              << areaRectangle(0, 0, -4, -4) << std::endl;
     double a;
-    std::cout << perimeterRectangle(-1, -1, 3, 3) << std::endl << perimeterRectangle0(-1, 1, 3, -3) << std::endl << perimeterRectangle0(1, -1, -3, 3) << std::endl << perimeterRectangle0(3, 3, -1, -1) << std::endl << perimeterRectangle0(-3, -3, 1, 1) << std::endl << perimeterRectangle0(-3, 3, 1, -1) << std::endl << perimeterRectangle0(0, 0, -4, -4) << std::endl;
     std::cout << "Enter side of square: ";
     std::cin >> a;
     double result = perimeterOfSquare(a);
@@ -185,7 +198,7 @@ double perimeter(double legA, double legB) // begin12_2
 {
     return legA + legB + hypotenuse(legA, legB);
 }
-void swap(double& a, double& b)
+void swap(double &a, double &b)
 {
     double temp = a;
     a = b;
@@ -193,7 +206,7 @@ void swap(double& a, double& b)
 }
 double squareRing(double radius1, double radius2) // begin13var1
 {
-    if(radius1 < radius2)
+    if (radius1 < radius2)
     {
         swap(radius1, radius2);
     }
@@ -213,7 +226,7 @@ double areaCircle2(double circumference) // begin14_2
     const double Pi = 3.1415;
     return Pi * std::pow(radius(circumference), 2);
 }
-double diameter(double area)// begin15_1
+double diameter(double area) // begin15_1
 {
     const double Pi = 3.1415;
     return 2 * std::sqrt(area / Pi);
@@ -223,15 +236,15 @@ double circumference3(double area) // begin15_2
     const double Pi = 3.1415;
     return Pi * diameter(area);
 }
-double distance(double point1, double point2)//begin16var1
+double distance(double point1, double point2) // begin16var1
 {
-    if(point2 < point1)
+    if (point2 < point1)
     {
         swap(point1, point2);
     }
     return fabs(point2 - point1);
 }
-double distance16(double point1, double point2)//begin16var2
+double distance16(double point1, double point2) // begin16var2
 {
     return fabs(fabs(point2) - fabs(point1));
 }
@@ -247,23 +260,23 @@ double multipleACB(double pointA, double pointB, double pointC) // begin18
 {
     return length(pointA, pointC) * length(pointC, pointB);
 }
-void minSwap(double& value1, double& value2)//begin19_0
+void minSwap(double &value1, double &value2) // begin19_0
 {
-    if(value1 < value2)
+    if (value1 < value2)
     {
         swap(value1, value2);
     }
 }
-bool equalSign(double value1, double value2)//begin19_1
+bool equalSign(double value1, double value2) // begin19_1
 {
-    //return (value1 * value2) < 0 ? false : true;
+    // return (value1 * value2) < 0 ? false : true;
     return !((value1 * value2) < 0);
 }
-double perimeterRectangle0(double pointX1, double pointY1, double pointX2, double pointY2)//begin19_2v0
+double perimeterRectangle0(double pointX1, double pointY1, double pointX2, double pointY2) // begin19_2v0
 {
     double width;
     minSwap(pointX1, pointX2);
-    if(equalSign(pointX1, pointX2))
+    if (equalSign(pointX1, pointX2))
     {
         width = fabs(fabs(pointX1) - fabs(pointX2));
     }
@@ -273,28 +286,39 @@ double perimeterRectangle0(double pointX1, double pointY1, double pointX2, doubl
     }
     double height;
     minSwap(pointY1, pointY2);
-    if(equalSign(pointY1, pointY2))
+    if (equalSign(pointY1, pointY2))
     {
         height = fabs(fabs(pointY1) - fabs(pointY2));
     }
-        else
+    else
     {
         height = fabs(pointY1) + fabs(pointY2);
     }
     return 2 * (width + height);
 }
-double perimeterRectangle(double pointX1, double pointY1, double pointX2, double pointY2)//begin19_2v1
+double perimeterRectangle(double pointX1, double pointY1, double pointX2, double pointY2) // begin19_2v1
 {
     minSwap(pointX1, pointX2);
     minSwap(pointY1, pointY2);
     return 2 * ((equalSign(pointX1, pointX2) ? fabs(fabs(pointX1) - fabs(pointX2)) : fabs(pointX1) + fabs(pointX2)) + (equalSign(pointY1, pointY2) ? fabs(fabs(pointY1) - fabs(pointY2)) : fabs(pointY1) + fabs(pointY2)));
 }
-double areaRectangle(double pointX1, double pointY1, double pointX2, double pointY2)//begin19_3
+double areaRectangle(double pointX1, double pointY1, double pointX2, double pointY2) // begin19_3
 {
     minSwap(pointX1, pointX2);
     minSwap(pointY1, pointY2);
     return (equalSign(pointX1, pointX2) ? fabs(fabs(pointX1) - fabs(pointX2)) : fabs(pointX1) + fabs(pointX2)) * (equalSign(pointY1, pointY2) ? fabs(fabs(pointY1) - fabs(pointY2)) : fabs(pointY1) + fabs(pointY2));
 }
+double distance0(double pointX1, double pointY1, double pointX2, double pointY2) // begin20v1
+{//не безопасно, надо как в begin19_2v1 
+    return std::sqrt(std::pow(pointX2 - pointX1, 2) + std::pow(pointY2 - pointY1, 2));
+}
+double distance(double pointX1, double pointY1, double pointX2, double pointY2) // begin20v2
+{
+    minSwap(pointX1, pointX2);
+    minSwap(pointY1, pointY2);
+    return std::sqrt(std::pow(pointX2 - pointX1, 2) + std::pow(pointY2 - pointY1, 2));
+}
+
 // Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
 void swapMinMax(double a, double b) // if task 9
 {
@@ -308,13 +332,13 @@ void swapMinMax(double a, double b) // if task 9
     std::cout << a << ' ' << b << std::endl;
 }
 
-//#include <iostream>
+// #include <iostream>
 
 /*int main()
 {
     int x = 78;
     std::cout << x << std::endl;
-    
+
     //std::cout << "QQQQ\n";
     //std::cout << "Hello!" << std::endl;
 
