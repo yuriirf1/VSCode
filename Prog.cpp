@@ -18,6 +18,29 @@ double sumSquares(double, double);                   // begin10_1
 double differenceSquares(double, double);            // begin10_2
 double multipleSquares(double, double);              // begin10_3
 double divisionSquares(double, double);              // begin10_4
+double sumAbs(double, double); // begin11_1
+double differenceAbs(double, double); // begin11_2
+double multipleAbs(double, double); // begin11_3
+double divideAbs(double, double); // begin11_4
+double hypotenuse(double, double); // begin12_1
+double perimeter(double, double); // begin12_2
+void swap(double&, double&);
+double squareRing(double, double); // begin13var1
+double squareRing2(double, double); // begin13var2
+double radius(double); // begin14_1
+double areaCircle2(double); // begin14_2
+double diameter(double);// begin15_1
+double circumference3(double); // begin15_2
+double distance(double, double);//begin16var1
+double distance16(double, double);//begin16var2
+double length(double, double); // begin17_1
+double sumABC(double, double, double); // begin17_2
+double multipleACB(double, double, double); // begin18
+void minSwap(double&, double&);//begin19_0
+bool equalSign(double, double);//begin19_1
+double perimeterRectangle0(double, double, double, double);//begin19_2v0
+double perimeterRectangle(double, double, double, double);//begin19_2v1
+double areaRectangle(double, double, double, double);//begin19_3
 void swapMinMax(double, double);                     // if task 9
 int main()
 {
@@ -218,6 +241,58 @@ double length(double pointA, double pointB) // begin17_1
 double sumABC(double pointA, double pointB, double pointC) // begin17_2
 {
     return length(pointA, pointC) + length(pointB, pointC);
+}
+double multipleACB(double pointA, double pointB, double pointC) // begin18
+{
+    return length(pointA, pointC) * length(pointC, pointB);
+}
+void minSwap(double& value1, double& value2)//begin19_0
+{
+    if(value1 < value2)
+    {
+        swap(value1, value2);
+    }
+}
+bool equalSign(double value1, double value2)//begin19_1
+{
+    //return (value1 * value2) < 0 ? false : true;
+    return !((value1 * value2) < 0);
+}
+double perimeterRectangle0(double pointX1, double pointY1, double pointX2, double pointY2)//begin19_2v0
+{
+    double width;
+    minSwap(pointX1, pointX2);
+    if(equalSign(pointX1, pointX2))
+    {
+        width = fabs(fabs(pointX1) - fabs(pointX2));
+    }
+    else
+    {
+        width = fabs(pointX1) + fabs(pointX2);
+    }
+    double height;
+    minSwap(pointY1, pointY2);
+    if(equalSign(pointY1, pointY2))
+    {
+        height = fabs(fabs(pointY1) - fabs(pointY2));
+    }
+        else
+    {
+        height = fabs(pointY1) + fabs(pointY2);
+    }
+    return 2 * (width + height);
+}
+double perimeterRectangle(double pointX1, double pointY1, double pointX2, double pointY2)//begin19_2v1
+{
+    minSwap(pointX1, pointX2);
+    minSwap(pointY1, pointY2);
+    return 2 * ((equalSign(pointX1, pointX2) ? fabs(fabs(pointX1) - fabs(pointX2)) : fabs(pointX1) + fabs(pointX2)) + (equalSign(pointY1, pointY2) ? fabs(fabs(pointY1) - fabs(pointY2)) : fabs(pointY1) + fabs(pointY2)));
+}
+double areaRectangle(double pointX1, double pointY1, double pointX2, double pointY2)//begin19_3
+{
+    minSwap(pointX1, pointX2);
+    minSwap(pointY1, pointY2);
+    return (equalSign(pointX1, pointX2) ? fabs(fabs(pointX1) - fabs(pointX2)) : fabs(pointX1) + fabs(pointX2)) * (equalSign(pointY1, pointY2) ? fabs(fabs(pointY1) - fabs(pointY2)) : fabs(pointY1) + fabs(pointY2));
 }
 // Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
 void swapMinMax(double a, double b) // if task 9
