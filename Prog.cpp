@@ -317,7 +317,33 @@ double distance(double pointX1, double pointY1, double pointX2, double pointY2) 
     minSwap(pointY1, pointY2);////////////////////////////////////////////////////////////////
     return std::sqrt(std::pow(pointX2 - pointX1, 2) + std::pow(pointY2 - pointY1, 2));
 }
-
+double trianglePerimeter(double pointX1, double pointY1, double pointX2, double pointY2, double pointX3, double pointY3) // begin21p1
+{
+    return distance(pointX1, pointY1, pointX2, pointY2) + distance(pointX1, pointY1, pointX3, pointY3) + distance(pointX2, pointY2, pointX3, pointY3);
+}
+double triangleSquare(double pointX1, double pointY1, double pointX2, double pointY2, double pointX3, double pointY3) // begin21p2
+{
+    double semiPerimeter = trianglePerimeter(pointX1, pointY1, pointX2, pointY2, pointX3, pointY3)/2;
+    return std::sqrt(semiPerimeter * (semiPerimeter - distance(pointX1, pointY1, pointX2, pointY2)) * (semiPerimeter - distance(pointX1, pointY1, pointX3, pointY3)) * (semiPerimeter - distance(pointX2, pointY2, pointX3, pointY3)));
+}
+void swap(double& valueA, double& valueB) // begin22
+{
+    double valueC = valueA;
+    valueA = valueB;
+    valueB = valueC;
+}
+void swap(double& valueA, double& valueB, double& valueC) // begin23v1
+{
+    double valueX = valueB;
+    valueB = valueA;
+    valueA = valueC;
+    valueC = valueX;
+}
+void swap(double& valueA, double& valueB, double& valueC) // begin23v2
+{
+    swap(valueA, valueB);
+    swap(valueA, valueC);//эти 2 строки дадут аналогичный требуемому в задании результат
+}
 void swapMinMax(double a, double b) // if task 9//// Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
 {
     if (a < b)
