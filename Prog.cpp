@@ -344,6 +344,20 @@ void swap(double& valueA, double& valueB, double& valueC) // begin23v2
     swap(valueA, valueB);
     swap(valueA, valueC);//эти 2 строки дадут аналогичный требуемому в задании результат
 }
+void swap0(double& valueA, double& valueB, double& valueC) // begin24v1
+{
+    double valueX = valueC;
+    valueC = valueA;
+    double valueY = valueB;
+    valueB = valueX;
+    valueA = valueY;
+}
+void swap0(double& valueA, double& valueB, double& valueC) // begin24v2
+{
+    swap(valueA, valueB);
+    swap(valueB, valueC);//эти 2 строки дадут аналогичный требуемому в задании результат
+
+}
 void swapMinMax(double a, double b) // if task 9//// Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
 {
     if (a < b)
