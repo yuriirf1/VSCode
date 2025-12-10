@@ -358,6 +358,14 @@ void swap0(double& valueA, double& valueB, double& valueC) // begin24v2
     swap(valueB, valueC);//эти 2 строки дадут аналогичный требуемому в задании результат
 
 }
+double functionBegin25(double valueX)  //begin25
+{
+    return 3 * std::pow(valueX, 6) - 6 * std::pow(valueX, 2) - 7;
+}
+double functionBegin26(double valueX)  //begin26
+{
+    return 4 * std::pow(valueX - 3, 6) - 7 * std::pow(valueX - 3, 3) + 2;
+}
 void swapMinMax(double a, double b) // if task 9//// Даны две переменные вещественного типа a и b. Перераспределить значения данных переменных так чтобы в A оказалось меньшее из значений, а в b - большее
 {
     if (a < b)
